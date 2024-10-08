@@ -5,7 +5,7 @@ function App() {
   console.log(import.meta.env.VITE_APPWRITE_URL)
   return (
     <>
-      <h1>A Blog app with AppWrite</h1>
+      <h1>A Blog App with AppWrite</h1>
     </>
   )
 }
