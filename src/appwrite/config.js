@@ -61,13 +61,7 @@ export class Services{
             await this.databases.deleteDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                slug,
-                {
-                    title,
-                    content,
-                    featuredImamge,
-                    status,
-                }
+                slug
             )
             return true; //If we write return before await means it return that documents but we delete the documents so we just return true or false --------- deleteDocumnets return metadata or any succefull/failure type things which not matter here
         } catch(error){
@@ -131,7 +125,7 @@ export class Services{
         }
     }
 
-    getFilePreview(fileId){ // No need to use async-awiat bcz its result is so fast and    doesn't return promise as per documentation
+    getFilePreview(fileId){ // No need to use async-awiat bcz its result is so fast and doesn't return promise as per documentation
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId
